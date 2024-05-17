@@ -6,35 +6,8 @@ SIMULATION AND IMPLEMENTATION OF  COMBINATIONAL LOGIC CIRCUITS
 # APPARATUS REQUIRED:
 Vivado 2023.2
 
-**LOGIC DIAGRAM**
-
-ENCODER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
-
-
-DECODER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
-
-
-MULTIPLEXER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
-
-
-DEMULTIPLEXER
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
-
-
-MAGNITUDE COMPARATOR
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
-
-
-  
 # PROCEDURE:
+
 STEP:1 Start the vivado software, Select and Name the New project.
 
 STEP:2 Select the device family, device, package and speed.
@@ -49,10 +22,13 @@ STEP:6 Click the simulation to simulate the program and give the inputs and veri
 
 STEP:7 compare the output with truth table.
 
+**LOGIC DIAGRAM**
+
+# ENCODER:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
 
 # VERILOG CODE:
-
-# 8-3 Encoder:
 
 module encoder(d,a,b,c);
 
@@ -66,7 +42,16 @@ or (c,d[1],d[3],d[5],d[7]);
 
 endmodule
 
-# 3-8 Decoder:
+# Output
+
+
+![image](https://github.com/riyamicheal/VLSI-LAB-EXP-2/assets/124061774/ff1d2741-1190-46ca-b530-41f1582e0293)
+
+# DECODER:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
+
+# Verilog code:
 
 module decoder(A,E,Y);
 
@@ -98,7 +83,15 @@ decoder_2_4 d2(A[1:0],~A[2],Y[7:4]);
 
 endmodule
 
-# 8-1 Multiplexer:
+# Output:
+
+![image](https://github.com/riyamicheal/VLSI-LAB-EXP-2/assets/124061774/190dfe95-803d-4b60-bcdc-c0de52ad93b7)
+
+# MULTIPLEXER
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
+
+# Verilog code:
 
 module multi(i,s,y);
 
@@ -136,7 +129,15 @@ end
 
 endmodule
 
-# 1-8 Demultiplexer
+# Output:
+
+![image](https://github.com/riyamicheal/VLSI-LAB-EXP-2/assets/124061774/00b443e2-87b1-453d-a0f3-65168395655d)
+
+# DEMULTIPLEXER
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
+
+# Verilog code:
 
 module demultiplexer(d1,d2,d3,d4,d5,d6,d7,d8,i,s0,s1,s2);
 
@@ -170,7 +171,15 @@ and g11(d8,s0,s1,s2,i);
 
 endmodule
 
-# 2 Bit Magnitude Comparator
+# Output:
+
+![image](https://github.com/riyamicheal/VLSI-LAB-EXP-2/assets/124061774/50a47dc1-8176-4743-9cd5-aa38fa2f7c2c)
+
+# MAGNITUDE COMPARATOR
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
+
+# Verilog code:
 
 module mag_com(a,b,gt,it,eq);
 
@@ -222,27 +231,7 @@ end
 
 endmodule
 
-  
-
-# OUTPUT WAVEFORM:
-
-# Encoder
-
-![image](https://github.com/riyamicheal/VLSI-LAB-EXP-2/assets/124061774/ff1d2741-1190-46ca-b530-41f1582e0293)
-
-# Decoder
-
-![image](https://github.com/riyamicheal/VLSI-LAB-EXP-2/assets/124061774/190dfe95-803d-4b60-bcdc-c0de52ad93b7)
-
-# Multiplexer
-
-![image](https://github.com/riyamicheal/VLSI-LAB-EXP-2/assets/124061774/00b443e2-87b1-453d-a0f3-65168395655d)
-
-# Demultiplexer
-
-![image](https://github.com/riyamicheal/VLSI-LAB-EXP-2/assets/124061774/50a47dc1-8176-4743-9cd5-aa38fa2f7c2c)
-
-# Magnitude Comparator
+# Output:
 
 ![image](https://github.com/riyamicheal/VLSI-LAB-EXP-2/assets/124061774/e05c95b5-da0a-4599-8e45-be22173a6b64)
 
